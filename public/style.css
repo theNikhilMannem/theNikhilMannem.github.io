@@ -25,5 +25,7 @@ body {
 }
 
 #deadpoolImage {
+  width: 10em;
+  height: 7em;
   border-radius: 1em;
 }
