@@ -15,7 +15,7 @@ body {
   align-items: center;
 }
 
-a:.portfolioLink {
+a .portfolioLink {
   color: maroon;
   font-family: 'Itim', cursive;
   font-size: .5em;
