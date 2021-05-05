@@ -3,7 +3,7 @@ body {
   background-image: url("https://wallup.net/wp-content/uploads/2019/09/07/152237-dc-universe-online-d-c-superhero-comics-superman.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-/*   background-color: #000; */
+  background-color: #000;
   color: #fff;
 
   display: flex;
