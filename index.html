@@ -220,30 +220,11 @@
 
 <body>
 	<div class="text-container">
-  <strong class="name">N. Mannem</strong>
+  <strong class="name">Mannem, Nikhil</strong>
 
   <br/><br/>
 
-  <!-- <em id="theQuote"></em> -->
-  <!-- <ul>
-    <li>
-    <code>
-      JavaScript (React, Vue, & Node)
-    </code>
-  </li>
-
-  <li>
-    <code>
-      Java (Spring boot & Hibernate)
-    </code>
-  </li>
-
-  <li>
-    <code>
-      Python (Django, Flask & FastAPI)
-    </code>
-  </li>
-  </ul> -->
+  <em id="theQuote"></em>
 </div>
 <div class="gradient-bg">
   <svg xmlns="http://www.w3.org/2000/svg">
@@ -267,9 +248,9 @@
 
 <script>
   let theQuoteElement = document.getElementById("theQuote");
-  // fetch('https://dummyjson.com/quotes')
-  //   .then(res => res.json())
-  //   .then(res => { theQuoteElement.innerHTML = res.quotes[Math.floor(Math.random() * 9)]["quote"] + '   - ' + res.quotes[Math.floor(Math.random() * 9)]["author"]; });
+  fetch('https://api.gameofthronesquotes.xyz/v1/random')
+    .then(res => res.json())
+    .then(res => { theQuoteElement.innerHTML = res.sentence + '   - ' + res.character.name + ', ' + res.house.name });
 
   
 </script>
