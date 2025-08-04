@@ -250,7 +250,7 @@
   let theQuoteElement = document.getElementById("theQuote");
   fetch('https://api.gameofthronesquotes.xyz/v1/random')
     .then(res => res.json())
-    .then(res => { theQuoteElement.innerHTML = res.sentence + '    — ' + res.character.name + ', ' + res.character.house.name });
+    .then(res => { theQuoteElement.innerHTML = '"' + res.sentence + '"    — ' + res.character.name + ', ' + res.character.house.name });
 
   
 </script>
