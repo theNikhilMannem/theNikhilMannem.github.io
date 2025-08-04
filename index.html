@@ -263,7 +263,7 @@
   let theQuoteElement = document.getElementById("theQuote");
   fetch('https://dummyjson.com/quotes')
     .then(res => res.json())
-    .then(res => { theQuoteElement.innerHTML = res.quotes[Math.floor(Math.random() * 9)]["quote"] + '   - ' + res.quotes[0]["author"]; });
+    .then(res => { theQuoteElement.innerHTML = res.quotes[Math.floor(Math.random() * 9)]["quote"] + '   - ' + res.quotes[Math.floor(Math.random() * 9)]["author"]; });
 
   
 </script>
