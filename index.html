@@ -254,7 +254,7 @@
   let theQuoteElement = document.getElementById("theQuote");
   fetch('https://dummyjson.com/quotes')
     .then(res => res.json())
-    .then(res => theQuoteElement.value = res.quotes[0]["quote"] + '   - ' + res.quotes[0]["author"]);
+    .then(res => { console.log(res); theQuoteElement.value = res.quotes[0]["quote"] + '   - ' + res.quotes[0]["author"]; });
 
   
 </script>
