@@ -208,6 +208,8 @@
 <body>
 	<div class="text-container">
   <code><strong class="name">Nikhil Mannem</strong></code>
+
+  <em id="theQuote"></em>
   <!-- <ul>
     <li>
     <code>
@@ -247,6 +249,13 @@
     <div class="interactive"></div>
   </div>
 </div>
+
+<script>
+  let theQuoteElement = document.getElementById("theQuote");
+  fetch('https://dummyjson.com/quotes')
+    .then(res => res.json())
+    .then(console.log);
+</script>
 
 </body>
 </html>
