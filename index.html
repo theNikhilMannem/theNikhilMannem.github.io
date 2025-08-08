@@ -1,259 +1,144 @@
+
 <!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Nikhil Mannem</title>
-  <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/38357711?s=48&v=4">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nikhil Mannem | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-	
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
-   html, body {
-  font-family: 'Montserrat', 'Dongle', sans-serif;
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-}
-
-.text-container {
-  z-index: 100;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  left: 0;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  opacity: 0.8;
-  user-select: none;
-  text-shadow: 1px 1px rgba(0,0,0,0.1);
-
-  code {
-    font-size: 30px;
-  }
-
-  .name {
-    font-size: 96px;
-    color: linear-gradient(80deg, var(--color-bg2), var(--color-bg1));
-  }
-
-  #theQuote {
-    max-width: 70%;
-    text-align: center;
-  }
-}
-
-:root {
-  --color-bg1: rgb(108, 0, 162);
-  --color-bg2: rgb(0, 17, 82);
-  --color1: 18, 113, 255;
-  --color2: 221, 74, 255;
-  --color3: 100, 220, 255;
-  --color4: 200, 50, 50;
-  --color5: 180, 180, 50;
-  --color-interactive: 140, 100, 255;
-  --circle-size: 80%;
-  --blending: hard-light;
-}
-
-@keyframes moveInCircle {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes moveVertical {
-  0% {
-    transform: translateY(-50%);
-  }
-  50% {
-    transform: translateY(50%);
-  }
-  100% {
-    transform: translateY(-50%);
-  }
-}
-
-@keyframes moveHorizontal {
-  0% {
-    transform: translateX(-50%) translateY(-10%);
-  }
-  50% {
-    transform: translateX(50%) translateY(10%);
-  }
-  100% {
-    transform: translateX(-50%) translateY(-10%);
-  }
-}
-
-
-.gradient-bg {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
-  top: 0;
-  left: 0;
-
-  svg {
-    position: fixed;
-    top:0;
-    left:0;
-    width: 0;
-    height: 0;
-  }
-
-
-  .gradients-container {
-    filter: url(#goo) blur(40px) ;
-    width: 100%;
-    height: 100%;
-  }
-
-  .g1 {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2);
-    left: calc(50% - var(--circle-size) / 2);
-
-    transform-origin: center center;
-    animation: moveVertical 30s ease infinite;
-
-    opacity: 1;
-  }
-
-  .g2 {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2);
-    left: calc(50% - var(--circle-size) / 2);
-
-    transform-origin: calc(50% - 400px);
-    animation: moveInCircle 20s reverse infinite;
-
-    opacity: 1;
-  }
-
-  .g3 {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2 + 200px);
-    left: calc(50% - var(--circle-size) / 2 - 500px);
-
-    transform-origin: calc(50% + 400px);
-    animation: moveInCircle 40s linear infinite;
-
-    opacity: 1;
-  }
-
-  .g4 {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2);
-    left: calc(50% - var(--circle-size) / 2);
-
-    transform-origin: calc(50% - 200px);
-    animation: moveHorizontal 40s ease infinite;
-
-    opacity: 0.7;
-  }
-
-  .g5 {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: calc(var(--circle-size) * 2);
-    height: calc(var(--circle-size) * 2);
-    top: calc(50% - var(--circle-size));
-    left: calc(50% - var(--circle-size));
-
-    transform-origin: calc(50% - 800px) calc(50% + 200px);
-    animation: moveInCircle 20s ease infinite;
-
-    opacity: 1;
-  }
-
-  .interactive {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: 100%;
-    height: 100%;
-    top: -50%;
-    left: -50%;
-
-    opacity: 0.7;
-  }
-}
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+      color: #111;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark {
+      background-color: #111;
+      color: white;
+    }
+    header, section, footer {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2 {
+      margin-top: 0;
+    }
+    nav a {
+      margin-right: 1rem;
+      text-decoration: none;
+      color: #0070f3;
+    }
+    .toggle-theme {
+      float: right;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 1rem 0;
+      background-color: #f9f9f9;
+    }
+    .dark .card {
+      background-color: #1e1e1e;
+      border-color: #333;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.75rem;
+      border-radius: 0.25rem;
+      border: 1px solid #ccc;
+    }
+    .contact-form button {
+      padding: 0.75rem 1.5rem;
+      background-color: #0070f3;
+      color: white;
+      border: none;
+      border-radius: 0.25rem;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
   </style>
 </head>
-
 <body>
-	<div class="text-container">
-  <strong class="name">Mannem, Nikhil</strong>
+  <header class="animate__animated animate__fadeInDown">
+    <span class="toggle-theme" onclick="toggleTheme()">🌓</span>
+    <h1>Nikhil Mannem</h1>
+    <p>Full-stack dev · React wizard · Spring Boot padawan · iOS newbie · Labrador dad</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+      <a href="/resume.pdf" download>Resume</a>
+    </nav>
+  </header>
 
-  <br/><br/>
+  <section id="about" class="animate__animated animate__fadeInUp">
+    <h2>About Me</h2>
+    <p>I’m passionate about building things that matter. From React dashboards to Spring Boot services and now diving into iOS dev — I’m all in. Also proud dad to a Labrador named Dollar 🐶.</p>
+  </section>
 
-  <em id="theQuote"></em>
-</div>
-<div class="gradient-bg">
-  <svg xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <filter id="goo">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
-        <feBlend in="SourceGraphic" in2="goo" />
-      </filter>
-    </defs>
-  </svg>
-  <div class="gradients-container">
-    <div class="g1"></div>
-    <div class="g2"></div>
-    <div class="g3"></div>
-    <div class="g4"></div>
-    <div class="g5"></div>
-    <div class="interactive"></div>
-  </div>
-</div>
+  <section id="projects" class="animate__animated animate__fadeInUp">
+    <h2>Projects</h2>
+    <div class="card">
+      <h3>React GitHub Finder</h3>
+      <p>A tool to search and explore GitHub users.</p>
+      <a href="https://github.com/theNikhilMannem/github-finder" target="_blank">View on GitHub</a>
+    </div>
+    <div class="card">
+      <h3>iOS Puppy App</h3>
+      <p>WIP app to track pet habits and logs.</p>
+      <a href="https://github.com/theNikhilMannem" target="_blank">View on GitHub</a>
+    </div>
+  </section>
 
-<script>
-  let theQuoteElement = document.getElementById("theQuote");
-  fetch('https://api.gameofthronesquotes.xyz/v1/random')
-    .then(res => res.json())
-    .then(res => { theQuoteElement.innerHTML = '"' + res.sentence + '"    — ' + res.character.name + ', ' + res.character.house.name });
+  <section id="blog" class="animate__animated animate__fadeInUp">
+    <h2>Blog</h2>
+    <div class="card">
+      <h3>Why I'm Moving to Germany</h3>
+      <p><em>August 2025</em></p>
+      <p>I’ve always dreamed of working in Europe. Germany offers both innovation and culture, and I'm ready to take the leap.</p>
+    </div>
+    <div class="card">
+      <h3>How I Trained My Labrador Dollar (With German Commands)</h3>
+      <p><em>July 2025</em></p>
+      <p>Teaching Dollar commands in German wasn’t just fun — it deepened our bond. Here's how I did it.</p>
+    </div>
+  </section>
 
-  
-</script>
+  <section id="contact" class="animate__animated animate__fadeInUp">
+    <h2>Contact Me</h2>
+    <form class="contact-form" action="https://formspree.io/f/xpzvgyzo" method="POST">
+      <input type="text" name="name" placeholder="Your name" required/>
+      <input type="email" name="email" placeholder="Your email" required/>
+      <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
+  <footer>
+    Built with ❤️ by Nikhil Mannem | Hosted on GitHub Pages
+    <br/>
+    <a href="https://github.com/theNikhilMannem" target="_blank">GitHub</a> |
+    <a href="https://linkedin.com/in/theNikhilMannem" target="_blank">LinkedIn</a>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
 </body>
 </html>
