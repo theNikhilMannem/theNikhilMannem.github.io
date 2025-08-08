@@ -2,143 +2,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nikhil Mannem | Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: white;
-      color: #111;
-      transition: background 0.3s, color 0.3s;
-    }
-    body.dark {
-      background-color: #111;
-      color: white;
-    }
-    header, section, footer {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    h1, h2 {
-      margin-top: 0;
-    }
-    nav a {
-      margin-right: 1rem;
-      text-decoration: none;
-      color: #0070f3;
-    }
-    .toggle-theme {
-      float: right;
-      cursor: pointer;
-      font-size: 1.2rem;
-    }
-    .card {
-      border: 1px solid #ccc;
-      border-radius: 0.5rem;
-      padding: 1rem;
-      margin: 1rem 0;
-      background-color: #f9f9f9;
-    }
-    .dark .card {
-      background-color: #1e1e1e;
-      border-color: #333;
-    }
-    .contact-form input, .contact-form textarea {
-      width: 100%;
-      margin: 0.5rem 0;
-      padding: 0.75rem;
-      border-radius: 0.25rem;
-      border: 1px solid #ccc;
-    }
-    .contact-form button {
-      padding: 0.75rem 1.5rem;
-      background-color: #0070f3;
-      color: white;
-      border: none;
-      border-radius: 0.25rem;
-      cursor: pointer;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      opacity: 0.7;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Nikhil Mannem — Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+        }
+        header {
+            background: rgba(0,0,0,0.6);
+            padding: 1em;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 1em;
+            text-decoration: none;
+        }
+        section {
+            padding: 2em;
+            background-color: rgba(0,0,0,0.3);
+            margin: 2em;
+            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #111;
+        }
+        .resume-btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            padding: 0.5em 1em;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .blog-post {
+            background: rgba(255,255,255,0.1);
+            margin-top: 1em;
+            padding: 1em;
+            border-radius: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin-top: 0.5em;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 1em;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff6600;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-  <header class="animate__animated animate__fadeInDown">
-    <span class="toggle-theme" onclick="toggleTheme()">🌓</span>
-    <h1>Nikhil Mannem</h1>
-    <p>Full-stack dev · React wizard · Spring Boot padawan · iOS newbie · Labrador dad</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#blog">Blog</a>
-      <a href="#contact">Contact</a>
-      <a href="/resume.pdf" download>Resume</a>
-    </nav>
-  </header>
+    <header>
+        <h1>Nikhil Mannem</h1>
+        <p>Software Engineer | React/Vue Dev | iOS Enthusiast</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#resume">Resume</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-  <section id="about" class="animate__animated animate__fadeInUp">
-    <h2>About Me</h2>
-    <p>I’m passionate about building things that matter. From React dashboards to Spring Boot services and now diving into iOS dev — I’m all in. Also proud dad to a Labrador named Dollar 🐶.</p>
-  </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm Nikhil Mannem, passionate about creating performant frontend apps with React, Vue, and exploring mobile development. I'm constantly learning and building things that matter.</p>
+    </section>
 
-  <section id="projects" class="animate__animated animate__fadeInUp">
-    <h2>Projects</h2>
-    <div class="card">
-      <h3>React GitHub Finder</h3>
-      <p>A tool to search and explore GitHub users.</p>
-      <a href="https://github.com/theNikhilMannem/github-finder" target="_blank">View on GitHub</a>
-    </div>
-    <div class="card">
-      <h3>iOS Puppy App</h3>
-      <p>WIP app to track pet habits and logs.</p>
-      <a href="https://github.com/theNikhilMannem" target="_blank">View on GitHub</a>
-    </div>
-  </section>
+    <section id="resume">
+        <h2>Resume</h2>
+        <p>Download my resume here:</p>
+        <a class="resume-btn" href="resume.pdf" download>Download Resume</a>
+    </section>
 
-  <section id="blog" class="animate__animated animate__fadeInUp">
-    <h2>Blog</h2>
-    <div class="card">
-      <h3>Why I'm Moving to Germany</h3>
-      <p><em>August 2025</em></p>
-      <p>I’ve always dreamed of working in Europe. Germany offers both innovation and culture, and I'm ready to take the leap.</p>
-    </div>
-    <div class="card">
-      <h3>How I Trained My Labrador Dollar (With German Commands)</h3>
-      <p><em>July 2025</em></p>
-      <p>Teaching Dollar commands in German wasn’t just fun — it deepened our bond. Here's how I did it.</p>
-    </div>
-  </section>
+    <section id="blog">
+        <h2>Latest Blog Posts</h2>
+        <div class="blog-post">
+            <h3>My Journey into iOS Dev 🚀</h3>
+            <p><em>August 08, 2025</em></p>
+            <p>After spending years in the JavaScript ecosystem, I decided to dive into the world of iOS development. Here's what I've learned so far...</p>
+        </div>
+        <div class="blog-post">
+            <h3>React vs Vue in 2025 ⚔️</h3>
+            <p><em>July 25, 2025</em></p>
+            <p>Both frameworks are amazing, but here's my take after using both in production...</p>
+        </div>
+    </section>
 
-  <section id="contact" class="animate__animated animate__fadeInUp">
-    <h2>Contact Me</h2>
-    <form class="contact-form" action="https://formspree.io/f/xpzvgyzo" method="POST">
-      <input type="text" name="name" placeholder="Your name" required/>
-      <input type="email" name="email" placeholder="Your email" required/>
-      <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="mailto:thenikhilmannem@gmail.com" method="post" enctype="text/plain">
+            <label>Name:</label>
+            <input type="text" name="name" required />
+            <label>Email:</label>
+            <input type="email" name="email" required />
+            <label>Message:</label>
+            <textarea name="message" rows="4" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
 
-  <footer>
-    Built with ❤️ by Nikhil Mannem | Hosted on GitHub Pages
-    <br/>
-    <a href="https://github.com/theNikhilMannem" target="_blank">GitHub</a> |
-    <a href="https://linkedin.com/in/theNikhilMannem" target="_blank">LinkedIn</a>
-  </footer>
-
-  <script>
-    function toggleTheme() {
-      document.body.classList.toggle('dark');
-    }
-  </script>
+    <footer>
+        <p>Connect with me:
+            <a href="https://github.com/theNikhilMannem" target="_blank">GitHub</a> |
+            <a href="https://linkedin.com/in/theNikhilMannem" target="_blank">LinkedIn</a>
+        </p>
+        <p>© 2025 Nikhil Mannem. All rights reserved.</p>
+    </footer>
 </body>
 </html>
