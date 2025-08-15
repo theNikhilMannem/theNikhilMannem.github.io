@@ -11,7 +11,7 @@ import Contact from './pages/Contact'
 import { getTheme } from './theme'
 
 function Root() {
-  const [mode, setMode] = React.useState('light')
+  const [mode, setMode] = React.useState('dark')
   const theme = React.useMemo(()=>getTheme(mode), [mode])
   return (
     <ThemeProvider theme={theme}>

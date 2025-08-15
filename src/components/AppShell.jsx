@@ -12,7 +12,7 @@ export default function AppShell({ children, mode, setMode }){
   const toggleMode = () => setMode(prev => prev === 'light' ? 'dark' : 'light')
 
   return (
-    <Box sx={{ display:'flex', minHeight:'100vh', bgcolor:'background.default' }}>
+    <Box sx={{ display:'flex', flexDirection: 'column', minHeight:'100vh', bgcolor:'background.default' }}>
       <Box component="header" sx={{ position:'sticky', top:0, zIndex: 2, boxShadow:1 }}>
         <AppBar position="sticky" color="transparent" enableColorOnDark sx={{ backdropFilter:'blur(8px)', bgcolor: 'background.paper' }}>
           <Toolbar>
