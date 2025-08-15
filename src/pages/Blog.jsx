@@ -2,10 +2,10 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
-const post = \`
+const post = `
 # First Blog Post
 This is an example markdown blog post.
-\`;
+`;
 
 export default function Blog() {
   return (
