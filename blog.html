@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nikhil Mannem | Blog</title>
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #1C6EA4, #154D71);
+      color: #fff;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h4 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: -1px;
+    }
+    .loading {
+      font-size: 1.2rem;
+      color: #bbdefb;
+      margin-bottom: 2rem;
+    }
+    details.accordion {
+      background: #1e3a5f;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease;
+      padding: 0;
+      border: none;
+    }
+    details.accordion[open] {
+      transform: translateY(-4px);
+    }
+    summary {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 1.25rem 1.5rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #fff;
+      outline: none;
+      border-radius: 12px 12px 0 0;
+      background: none;
+      user-select: none;
+      border: none;
+    }
+    .expand-icon {
+      display: inline-block;
+      margin-right: 1rem;
+      transition: transform 0.2s;
+      font-size: 1.5rem;
+      color: #bbdefb;
+    }
+    details[open] .expand-icon {
+      transform: rotate(180deg);
+    }
+    .accordion-details {
+      padding: 0 1.5rem 1.5rem 1.5rem;
+      color: #e3f2fd;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    .accordion-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #bbdefb;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h4>Blog</h4>
+    <!-- Loading indicator (hidden by default, shown if needed) -->
+    <!-- <div class="loading">Loading posts…</div> -->
+
+    <!-- <details class="accordion" open>
+      <summary>
+        <span class="expand-icon">&#9660;</span>
+        <span class="accordion-title">moving-to-germany</span>
+      </summary>
+      <div class="accordion-details">
+        <p>
+          In this post, I share my thoughts about relocating to Germany as a software engineer,
+          the challenges, and how I’m preparing for this exciting chapter of life.
+        </p>
+      </div>
+    </details> -->
+
+    <details class="accordion">
+      <summary>
+        <span class="expand-icon">&#9660;</span>
+        <span class="accordion-title">Training my Labrador, Dollar 🐶</span>
+      </summary>
+      <div class="accordion-details">
+        <p>
+          Dollar is my best buddy! Here’s how I trained him with German commands and helped him
+          become calm and playful around other dogs in my community.
+        </p>
+      </div>
+    </details>
+
+    <!-- <details class="accordion">
+      <summary>
+        <span class="expand-icon">&#9660;</span>
+        <span class="accordion-title">why-i-love-react-material-ui</span>
+      </summary>
+      <div class="accordion-details">
+        <p>
+          As a frontend engineer, I’ve always admired clean UI and fast performance.
+          React with MUI gives me the power to design intuitive apps with speed and style.
+        </p>
+      </div>
+    </details> -->
+  </main>
+</body>
+</html>
