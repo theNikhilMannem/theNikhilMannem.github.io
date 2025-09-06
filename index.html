@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nikhil Mannem | Portfolio</title>
+    <link
+      rel="icon"
+      href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%230d47a1"/><text x="50" y="58" font-size="58" text-anchor="middle" fill="white">N</text></svg>'
+    />
+
+    <meta
+      name="description"
+      content="Nikhil Mannem - Portfolio, Blog, Resume & Contact"
+    />
+    <meta
+      name="keywords"
+      content="Nikhil Mannem, Software Engineer, React, Material UI, Portfolio, Blog"
+    />
+    <meta name="author" content="Nikhil Mannem" />
+
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Nikhil Mannem | Portfolio" />
+    <meta
+      property="og:description"
+      content="Portfolio & Blog of Nikhil Mannem. Software Engineer."
+    />
+    <meta
+      property="og:image"
+      content="https://theNikhilMannem.github.io/social-preview.png"
+    />
+    <meta property="og:url" content="https://theNikhilMannem.github.io" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nikhil Mannem | Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Portfolio & Blog of Nikhil Mannem. Software Engineer."
+    />
+    <meta
+      name="twitter:image"
+      content="https://theNikhilMannem.github.io/social-preview.png"
+    />
+
+    <meta
+      name="description"
+      content="Nikhil Mannem - Portfolio, Blog, Resume & Contact"
+    />
+    <meta
+      name="keywords"
+      content="Nikhil Mannem, Software Engineer, React, Material UI, Portfolio, Blog"
+    />
+    <meta name="author" content="Nikhil Mannem" />
+
+    <meta property="og:title" content="Nikhil Mannem | Portfolio" />
+    <meta
+      property="og:description"
+      content="Portfolio & Blog of Nikhil Mannem. Software Engineer."
+    />
+    <meta property="og:image" content="%PUBLIC_URL%/social-preview.png" />
+    <meta property="og:url" content="https://theNikhilMannem.github.io" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nikhil Mannem | Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Portfolio & Blog of Nikhil Mannem. Software Engineer."
+    />
+    <meta name="twitter:image" content="%PUBLIC_URL%/social-preview.png" />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Roboto, Arial, sans-serif;
+        background: #0d47a1;
+        color: #fff;
+      }
+      .gradient-bg {
+        border-radius: 24px;
+        margin-bottom: 2.5rem;
+        overflow: hidden;
+        position: relative;
+        min-height: 420px;
+        box-shadow: 0 6px 32px rgba(0, 0, 0, 0.18);
+        background: linear-gradient(135deg, #1c6ea4 0%, #154d71 100%);
+      }
+      .gradients-container {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+      }
+      .g1,
+      .g2,
+      .g3,
+      .g4,
+      .g5,
+      .interactive {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(32px);
+        opacity: 0.5;
+        mix-blend-mode: lighten;
+      }
+      .g1 {
+        width: 320px;
+        height: 320px;
+        left: -80px;
+        top: -80px;
+        background: #42a5f5;
+      }
+      .g2 {
+        width: 220px;
+        height: 220px;
+        right: 40px;
+        top: 60px;
+        background: #7e57c2;
+      }
+      .g3 {
+        width: 180px;
+        height: 180px;
+        left: 60px;
+        bottom: 40px;
+        background: #26c6da;
+      }
+      .g4 {
+        width: 140px;
+        height: 140px;
+        right: 80px;
+        bottom: 60px;
+        background: #ffca28;
+      }
+      .g5 {
+        width: 100px;
+        height: 100px;
+        left: 50%;
+        top: 50%;
+        background: #ef5350;
+        transform: translate(-50%, -50%);
+      }
+      .interactive {
+        width: 180px;
+        height: 180px;
+        left: 60%;
+        top: 60%;
+        background: #66bb6a;
+      }
+      .hero-overlay {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 420px;
+        padding: 3rem 1rem 2rem 1rem;
+        text-align: center;
+      }
+      .hero-title {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #fff;
+        text-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+        margin-bottom: 1.2rem;
+        letter-spacing: -1px;
+      }
+      .hero-subtitle {
+        font-size: 1.3rem;
+        color: #fff;
+        opacity: 0.9;
+        margin-bottom: 2rem;
+        font-weight: 400;
+      }
+      .hero-buttons {
+        display: flex;
+        gap: 1.2rem;
+        margin-top: 1.2rem;
+        justify-content: center;
+      }
+      .mui-btn {
+        font-size: 1.1rem;
+        padding: 0.85rem 2.2rem;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        transition: background 0.18s, box-shadow 0.18s;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .mui-btn.primary {
+        background: #1976d2;
+        color: #fff;
+      }
+      .mui-btn.primary:hover {
+        background: #1565c0;
+        box-shadow: 0 4px 16px rgba(33, 150, 243, 0.18);
+      }
+      .mui-btn.secondary {
+        background: #7e57c2;
+        color: #fff;
+      }
+      .mui-btn.secondary:hover {
+        background: #5e35b1;
+        box-shadow: 0 4px 16px rgba(126, 87, 194, 0.18);
+      }
+      #about {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem 1rem 0 1rem;
+      }
+      #about h4 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.2rem;
+        color: #fff;
+        letter-spacing: -1px;
+      }
+      #about p {
+        font-size: 1.15rem;
+        color: #e3f2fd;
+        line-height: 1.7;
+        margin-bottom: 0;
+      }
+      @media (max-width: 600px) {
+        .hero-title {
+          font-size: 2rem;
+        }
+        .hero-subtitle {
+          font-size: 1.05rem;
+        }
+        .mui-btn {
+          font-size: 1rem;
+          padding: 0.7rem 1.3rem;
+        }
+        #about h4 {
+          font-size: 1.3rem;
+        }
+        #about p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-CQMaD_XX.js"></script>
+  </head>
+  <body>
+    <site-header></site-header>
+
+    <div class="gradient-bg">
+      <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur
+              in="SourceGraphic"
+              stdDeviation="10"
+              result="blur"
+            />
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+              result="goo"
+            />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+      </svg>
+      <div class="gradients-container">
+        <div class="g1"></div>
+        <div class="g2"></div>
+        <div class="g3"></div>
+        <div class="g4"></div>
+        <div class="g5"></div>
+        <div class="interactive"></div>
+      </div>
+      <div class="hero-overlay">
+        <div class="hero-title">Full‑stack Dev · React wizard</div>
+        <div class="hero-subtitle">
+          Spring Boot padawan · iOS newbie · Labrador dad 🐶
+        </div>
+        <div class="hero-buttons">
+          <a class="mui-btn primary" href="/projects">See Projects</a>
+          <a class="mui-btn secondary" href="/blog">Read Blog</a>
+        </div>
+      </div>
+    </div>
+    <section id="about">
+      <h4>About Me</h4>
+      <p>
+        I’m passionate about building things that matter. From React dashboards
+        to Spring Boot services and now diving into iOS dev — I’m all in. Proud
+        dad to a Labrador named Dollar 🐶.
+      </p>
+    </section>
+
+    <site-footer></site-footer>
+
+  </body>
+</html>
